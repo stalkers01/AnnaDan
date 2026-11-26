@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Activity | Annadan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="logo"><i class="fa-solid fa-hand-holding-heart"></i><h2>Annadan</h2><p>Connect • Donate • Nourish</p></div>
+        <nav>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="donations.html"><i class="fa-solid fa-gift"></i> Donations</a>
+            <a href="requests.html"><i class="fa-regular fa-heart"></i> Requests</a>
+            <a href="activity.html" class="active"><i class="fa-solid fa-clock-rotate-left"></i> My Activity</a>
+            <a href="impact.html"><i class="fa-solid fa-chart-simple"></i> Impact</a>
+            <a href="features.html"><i class="fa-solid fa-wand-magic-sparkles"></i> More tools</a>
+            <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+            <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+        </nav>
+        <div class="sidebar-message"><i class="fa-solid fa-seedling"></i><h3>Together</h3><p>We can reduce food waste and fight hunger ❤️</p></div>
+        <div class="account"><p>You are logged in as</p><h4>Guest</h4><a href="profile.html">View Profile</a></div>
+    </aside>
+
+    <main class="main-content content-page">
+        <header class="page-heading">
+            <div><p class="profile-eyebrow">YOUR ANNADAN JOURNEY</p><h1>My Activity</h1><p>Keep track of the food you share and request.</p></div>
+            <a href="index.html" class="profile-home-link">Back to Home</a>
+        </header>
+
+        <section class="activity-summary">
+            <div><span>Donations shared</span><strong data-activity-stat="donations_shared">0</strong></div>
+            <div><span>Requests made</span><strong data-activity-stat="requests_made">0</strong></div>
+            <div><span>Meals helped</span><strong data-activity-stat="meals_helped">0</strong></div>
+        </section>
+
+        <section class="activity-panel" id="activity-panel" aria-live="polite">
+            <h2>Loading activity…</h2>
+        </section>
+    </main>
+</div>
+<script src="js/api.js"></script>
+<script src="js/session-ui.js"></script>
+<script src="js/activity.js"></script>
+</body>
+</html>
+
+

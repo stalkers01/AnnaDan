@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Annadan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="logo"><i class="fa-solid fa-hand-holding-heart"></i><h2>Annadan</h2><p>Connect • Donate • Nourish</p></div>
+        <nav>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="donations.html"><i class="fa-solid fa-gift"></i> Donations</a>
+            <a href="requests.html"><i class="fa-regular fa-heart"></i> Requests</a>
+            <a href="activity.html"><i class="fa-solid fa-clock-rotate-left"></i> My Activity</a>
+            <a href="impact.html"><i class="fa-solid fa-chart-simple"></i> Impact</a>
+            <a href="features.html"><i class="fa-solid fa-wand-magic-sparkles"></i> More tools</a>
+            <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+            <a href="settings.html" class="active"><i class="fa-solid fa-gear"></i> Settings</a>
+        </nav>
+        <div class="sidebar-message"><i class="fa-solid fa-seedling"></i><h3>Together</h3><p>We can reduce food waste and fight hunger ❤️</p></div>
+        <div class="account"><p>You are logged in as</p><h4>Guest</h4><a href="profile.html">View Profile</a></div>
+    </aside>
+
+    <main class="main-content content-page">
+        <header class="page-heading">
+            <div><p class="profile-eyebrow">MAKE ANNADAN YOURS</p><h1>Settings</h1><p>Choose how you want to use the site.</p></div>
+            <a href="index.html" class="profile-home-link">Back to Home</a>
+        </header>
+
+        <form id="settings-form" class="settings-panel">
+            <section class="settings-group">
+                <h2>Notifications</h2>
+                <p>Choose which updates you would like to see.</p>
+                <label class="setting-option"><span><strong>Donation updates</strong><small>Updates about food offers and pickups</small></span><input type="checkbox" name="donationUpdates" checked></label>
+                <label class="setting-option"><span><strong>Request updates</strong><small>Updates about your food requests</small></span><input type="checkbox" name="requestUpdates" checked></label>
+                <label class="setting-option"><span><strong>Email notifications</strong><small>Send service updates to your registered email</small></span><input type="checkbox" name="emailUpdates" checked></label>
+                <label class="setting-option"><span><strong>SMS notifications</strong><small>Send delivery updates by SMS when Twilio is configured</small></span><input type="checkbox" name="smsUpdates"></label>
+            </section>
+            <section class="settings-group">
+                <h2>Account preferences</h2>
+                <p>These preferences are saved to your Annadan account.</p>
+                <label class="settings-label" for="preferred-role">Preferred role</label>
+                <select id="preferred-role" name="preferredRole">
+                    <option value="delivery_partner">Delivery partner</option>
+                    <option value="donor">Food donor</option>
+                    <option value="receiver">NGO, shelter or food receiver</option>
+                </select>
+            </section>
+            <button class="settings-save" type="submit">Save settings</button>
+            <p id="settings-message" class="settings-message" role="status" aria-live="polite"></p>
+        </form>
+
+    </main>
+</div>
+<script src="js/api.js"></script>
+<script src="js/session-ui.js"></script>
+<script src="js/settings.js"></script>
+</body>
+</html>
+
+

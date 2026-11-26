@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish a Donation | Annadan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="register-page">
+    <main class="register-card donation-form-card">
+        <a class="register-logo" href="index.html">
+            <i class="fa-solid fa-hand-holding-heart"></i><span>Annadan</span>
+        </a>
+        <h1>Publish surplus food</h1>
+        <p class="register-intro">Share accurate food, quantity and pickup information so a receiver can request it.</p>
+        <form id="donation-form" class="account-form">
+            <label for="donation-title">Food title</label>
+            <input id="donation-title" name="title" type="text" maxlength="120" placeholder="Vegetable meal boxes" required>
+
+            <label for="donation-description">Description</label>
+            <textarea id="donation-description" name="description" rows="3" maxlength="2000" placeholder="Describe ingredients, packaging and condition" required></textarea>
+
+            <label for="food-type">Food category</label>
+            <select id="food-type" name="food_type" required>
+                <option value="prepared_food">Prepared food</option>
+                <option value="packaged_food">Packaged food</option>
+                <option value="bakery">Bakery</option>
+                <option value="produce">Fresh produce</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="quantity-total">Quantity available</label>
+            <input id="quantity-total" name="quantity_total" type="number" min="1" max="100000" required>
+
+            <label for="quantity-unit">Quantity unit</label>
+            <select id="quantity-unit" name="quantity_unit" required>
+                <option value="meal_boxes">Meal boxes</option>
+                <option value="packets">Packets</option>
+                <option value="kg">Kilograms</option>
+                <option value="litres">Litres</option>
+                <option value="portions">Portions</option>
+            </select>
+
+            <label for="pickup-location">Pickup address / location</label>
+            <input id="pickup-location" name="pickup_location" type="text" maxlength="255" required>
+
+            <label for="donation-city">City</label>
+            <input id="donation-city" name="city" type="text" maxlength="100" required>
+
+            <label for="donation-image">Food image (JPEG, PNG or WebP; max 5 MB)</label>
+            <input id="donation-image" name="image" type="file" accept="image/jpeg,image/png,image/webp">
+            <p class="feature-hint">Images are stored securely through the configured cloud image provider.</p>
+
+            <label for="pickup-deadline">Pickup deadline</label>
+            <input id="pickup-deadline" name="pickup_deadline" type="datetime-local" required>
+
+            <label for="prepared-at">Prepared at (optional)</label>
+            <input id="prepared-at" name="prepared_at" type="datetime-local">
+
+            <label for="allergens">Allergens (comma-separated)</label>
+            <input id="allergens" name="allergens" type="text" placeholder="Milk, peanuts, gluten">
+
+            <label class="form-checkbox"><input name="is_vegetarian" type="checkbox"> Vegetarian food</label>
+            <fieldset class="safety-checklist">
+                <legend>Food safety self-check</legend>
+                <label class="form-checkbox"><input name="sealed_packaging" type="checkbox" required> Food is packed in clean, covered containers</label>
+                <label class="form-checkbox"><input name="allergens_disclosed" type="checkbox" required> Ingredients and known allergens are disclosed</label>
+                <label class="form-checkbox"><input name="safe_handling" type="checkbox" required> Food was handled and stored safely</label>
+                <label class="form-checkbox"><input name="pickup_window_valid" type="checkbox" required> Pickup is possible before the food expires</label>
+            </fieldset>
+            <button type="button" class="feature-action" id="use-pickup-location">Attach my pickup coordinates (optional)</button>
+            <p id="pickup-location-status" class="feature-status" aria-live="polite">Coordinates are optional and are shared with approved receivers.</p>
+            <button type="submit">Publish donation</button>
+        </form>
+        <p id="donation-message" class="register-message" role="status" aria-live="polite"></p>
+        <a class="back-home" href="donations.html">View available donations</a><br>
+        <a class="back-home" href="index.html">← Back to home</a>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/create-donation.js"></script>
+</body>
+</html>

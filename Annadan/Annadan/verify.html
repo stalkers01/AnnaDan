@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify account | Annadan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="register-page">
+    <main class="register-card">
+        <a class="register-logo" href="index.html"><span>Annadan</span></a>
+        <h1>Verify your account</h1>
+        <p class="register-intro">Enter the six-digit code sent to your registered email address. The code expires after ten minutes.</p>
+        <form id="email-verify-form" class="account-form">
+            <label for="verification-code">Email verification code</label>
+            <input id="verification-code" name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" minlength="6" maxlength="6" required>
+            <button type="submit">Verify email</button>
+        </form>
+        <button id="resend-email-code" class="feature-action" type="button">Resend code</button>
+        <hr class="feature-divider">
+        <h2>Verify phone number (optional)</h2>
+        <p class="register-intro">Phone verification requires Twilio Verify credentials on the Annadan API.</p>
+        <form id="phone-verify-form" class="account-form">
+            <button id="send-phone-code" type="button">Send phone OTP</button>
+            <label for="phone-code">Phone verification code</label>
+            <input id="phone-code" name="code" inputmode="numeric" minlength="4" maxlength="10">
+            <button type="submit">Verify phone</button>
+        </form>
+        <p id="verify-message" class="register-message" role="status" aria-live="polite"></p>
+        <a class="back-home" href="login.html">Back to sign in</a>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/verify.js"></script>
+</body>
+</html>
