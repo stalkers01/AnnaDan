@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration | Annadan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="logo"><i class="fa-solid fa-hand-holding-heart"></i><h2>Annadan</h2><p>Administration</p></div>
+        <nav>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="donations.html"><i class="fa-solid fa-gift"></i> Donations</a>
+            <a href="requests.html"><i class="fa-regular fa-heart"></i> Requests</a>
+            <a href="admin.html" class="active"><i class="fa-solid fa-shield-halved"></i> Admin dashboard</a>
+        </nav>
+        <div class="sidebar-message"><i class="fa-solid fa-shield-heart"></i><h3>Responsible access</h3><p>Use administrator permissions only for platform operations.</p></div>
+    </aside>
+    <main class="main-content content-page">
+        <header class="page-heading">
+            <div><p class="profile-eyebrow">PLATFORM CONTROL</p><h1>Admin dashboard</h1><p>Monitor accounts and current platform activity.</p></div>
+            <a href="index.html" class="profile-home-link">Back to Home</a>
+        </header>
+        <section class="activity-summary admin-summary">
+            <div><span>Total users</span><strong data-admin-stat="total_users">—</strong></div>
+            <div><span>Active users</span><strong data-admin-stat="active_users">—</strong></div>
+            <div><span>Available donations</span><strong data-admin-stat="active_donations">—</strong></div>
+            <div><span>Pending requests</span><strong data-admin-stat="pending_requests">—</strong></div>
+            <div><span>Delivered requests</span><strong data-admin-stat="delivered_requests">—</strong></div>
+        </section>
+        <section class="admin-table-panel">
+            <h2>Registered accounts</h2>
+            <p>Disabling an account blocks access to authenticated API operations.</p>
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Action</th></tr></thead>
+                    <tbody id="admin-users"><tr><td colspan="5">Loading account records…</td></tr></tbody>
+                </table>
+            </div>
+        </section>
+        <section class="admin-table-panel">
+            <h2>Food-safety review queue</h2>
+            <p>Check the donor's self-declared handling checklist and image. Approval is an administrative review, not laboratory certification.</p>
+            <div id="safety-reviews"><p>Loading pending reviews…</p></div>
+        </section>
+        <p id="admin-message" class="register-message" role="status" aria-live="polite"></p>
+    </main>
+</div>
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

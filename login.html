@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in | Annadan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="register-page">
+    <main class="register-card">
+        <a class="register-logo" href="index.html">
+            <i class="fa-solid fa-hand-holding-heart"></i><span>Annadan</span>
+        </a>
+        <h1>Welcome back</h1>
+        <p class="register-intro">Sign in to manage your donations, requests and deliveries.</p>
+        <form id="login-form" class="account-form">
+            <label for="login-email">Email address</label>
+            <input id="login-email" name="email" type="email" autocomplete="email" required>
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+            <button type="submit">Sign in</button>
+        </form>
+        <p id="login-message" class="register-message" role="status" aria-live="polite"></p>
+        <a class="back-home" href="reset-password.html">Forgot your password?</a><br>
+        <a class="back-home" href="register.html">Create a new account</a><br>
+        <a class="back-home" href="index.html">← Back to home</a>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
