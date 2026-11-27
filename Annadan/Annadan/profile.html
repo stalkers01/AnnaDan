@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Annadan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <h2>Annadan</h2>
+            <p>Connect • Donate • Nourish</p>
+        </div>
+
+        <nav>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="donations.html"><i class="fa-solid fa-gift"></i> Donations</a>
+            <a href="requests.html"><i class="fa-regular fa-heart"></i> Requests</a>
+            <a href="activity.html"><i class="fa-solid fa-clock-rotate-left"></i> My Activity</a>
+            <a href="impact.html"><i class="fa-solid fa-chart-simple"></i> Impact</a>
+            <a href="features.html"><i class="fa-solid fa-wand-magic-sparkles"></i> More tools</a>
+            <a href="profile.html" class="active"><i class="fa-solid fa-user"></i> Profile</a>
+            <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+        </nav>
+
+        <div class="sidebar-message">
+            <i class="fa-solid fa-seedling"></i>
+            <h3>Together</h3>
+            <p>We can reduce food waste and fight hunger ❤️</p>
+        </div>
+
+        <div class="account">
+            <p>You are logged in as</p>
+            <h4>Guest</h4>
+            <a href="settings.html">Account preferences</a>
+        </div>
+
+        <a href="index.html" class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Sign out
+        </a>
+    </aside>
+
+    <main class="main-content profile-page">
+        <header class="topbar">
+            <div>
+                <p class="profile-eyebrow">ACCOUNT</p>
+                <h1>My Profile</h1>
+            </div>
+            <a class="profile-home-link" href="index.html">Back to Home</a>
+        </header>
+
+        <section class="profile-summary">
+            <div class="profile-avatar" id="profile-avatar">A</div>
+            <div>
+                <h2 id="profile-name">Loading profile…</h2>
+                <p id="profile-role">Community member</p>
+            </div>
+            <span class="profile-status"><i class="fa-solid fa-circle"></i> Active</span>
+        </section>
+
+        <section class="profile-stats">
+            <div class="profile-stat">
+                <i class="fa-solid fa-gift"></i>
+                <strong data-profile-stat="donations_shared">0</strong>
+                <span>Donations shared</span>
+            </div>
+            <div class="profile-stat">
+                <i class="fa-regular fa-heart"></i>
+                <strong data-profile-stat="requests_made">0</strong>
+                <span>Requests made</span>
+            </div>
+            <div class="profile-stat">
+                <i class="fa-solid fa-utensils"></i>
+                <strong data-profile-stat="meals_helped">0</strong>
+                <span>Meals helped</span>
+            </div>
+        </section>
+
+        <section class="profile-details">
+            <div class="profile-section-heading">
+                <div>
+                    <h2>Account details</h2>
+                    <p>Your profile information</p>
+                </div>
+            </div>
+
+            <div class="profile-detail-row">
+                <span>Full name</span>
+                <strong id="profile-full-name">—</strong>
+            </div>
+            <div class="profile-detail-row">
+                <span>Email address</span>
+                <strong id="profile-email">—</strong>
+            </div>
+            <div class="profile-detail-row">
+                <span>Phone number</span>
+                <strong id="profile-phone">—</strong>
+            </div>
+            <div class="profile-detail-row">
+                <span>Account type</span>
+                <strong id="profile-account-type">—</strong>
+            </div>
+        </section>
+
+        <section class="profile-activity">
+            <div>
+                <h2>Recent activity</h2>
+                <p id="profile-message">Your donations and requests will appear here.</p>
+            </div>
+            <a href="donations.html">Explore available food →</a>
+        </section>
+    </main>
+</div>
+<script src="js/api.js"></script>
+<script src="js/session-ui.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>
+
+
+
+
